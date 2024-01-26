@@ -12,7 +12,7 @@ struct StartView: View {
     @State private var yourName = ""
     @State private var opponentName = ""
     @FocusState private var focus: Bool
-    
+    @State private var startGame: Bool = false
     var body: some View {
         VStack {
             Picker("Select your Game Type", selection: $gameType) {
@@ -30,11 +30,11 @@ struct StartView: View {
                 case .single:
                     VStack{
                         TextField("Your Name", text: $yourName)
+                        TextField("Opponent Name", text: $opponentName)
                     }
                 case .bot:
                     VStack{
                         TextField("Your Name", text: $yourName)
-                        TextField("Opponent Name", text: $opponentName)
                     }
                 case .peer:
                     EmptyView()
@@ -49,6 +49,7 @@ struct StartView: View {
             if gameType != .peer {
                 Button("Start Game") {
                     focus = false
+                    startGame.toggle()
                 }
                 .buttonStyle(.borderedProminent)
                 .disabled( gameType == .undetermined ||
@@ -60,6 +61,11 @@ struct StartView: View {
             Spacer()
         }
         .padding()
+        .navigationTitle("Xs And Os")
+        .fullScreenCover(isPresented: $startGame, content: {
+            GameView()
+        })
+        .inNavigationStack()
     }
 }
 #Preview {
