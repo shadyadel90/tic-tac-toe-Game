@@ -12,6 +12,7 @@
 		F20FBEF92B63963F009F6C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20FBEF82B63963F009F6C25 /* Assets.xcassets */; };
 		F20FBEFC2B63963F009F6C25 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20FBEFB2B63963F009F6C25 /* Preview Assets.xcassets */; };
 		F20FBF032B639766009F6C25 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20FBF022B639766009F6C25 /* Launch Screen.storyboard */; };
+		F20FBF062B639B8D009F6C25 /* Game Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FBF052B639B8D009F6C25 /* Game Type.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		F20FBEF82B63963F009F6C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F20FBEFB2B63963F009F6C25 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F20FBF022B639766009F6C25 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F20FBF052B639B8D009F6C25 /* Game Type.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game Type.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		F20FBEF32B63963E009F6C25 /* XandO */ = {
 			isa = PBXGroup;
 			children = (
+				F20FBF042B639B72009F6C25 /* Game Models */,
 				F20FBEF42B63963E009F6C25 /* AppEntry.swift */,
 				F20FBEF62B63963E009F6C25 /* StartView.swift */,
 				F20FBEF82B63963F009F6C25 /* Assets.xcassets */,
@@ -68,6 +71,14 @@
 				F20FBEFB2B63963F009F6C25 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F20FBF042B639B72009F6C25 /* Game Models */ = {
+			isa = PBXGroup;
+			children = (
+				F20FBF052B639B8D009F6C25 /* Game Type.swift */,
+			);
+			path = "Game Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F20FBEF72B63963E009F6C25 /* StartView.swift in Sources */,
+				F20FBF062B639B8D009F6C25 /* Game Type.swift in Sources */,
 				F20FBEF52B63963E009F6C25 /* AppEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
